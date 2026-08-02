@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "repo": "capy",
+  "baseline": {
+    "command": [
+      "zig",
+      "build",
+      "--help"
+    ],
+    "expected_classification": "zig-toolchain",
+    "preferred_zig": "0.14.1"
+  },
+  "build": {
+    "command": [
+      "zig",
+      "build",
+      "--summary",
+      "all"
+    ],
+    "zig": "0.14.1",
+    "expected_classification": "dependency-format"
+  },
+  "azazel": {
+    "command": [
+      "azazel",
+      "parity",
+      "--manifest",
+      ".azazel/parity.json"
+    ],
+    "status": "scaffold-only",
+    "first_targets": [
+      "lib:capy",
+      "platform UI backend selection",
+      "examples"
+    ],
+    "system_deps": [],
+    "required_tools": [],
+    "pkg_config_libs": [],
+    "replacement_gaps": [
+      "transitive package format diagnostics",
+      "platform UI backend metadata"
+    ],
+    "integration_kind": "azazel",
+    "executable_parity": {
+      "status": "not-modeled",
+      "command": [],
+      "expected_classification": "not-modeled",
+      "targets": [],
+      "workdir": ".azazel/parity-work"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "capy",
+  "upstream": "capy-ui/capy",
+  "fork": "godofecht/capy",
+  "branch": "azazel-zaza-integration",
+  "notes": "native UI toolkit; exact Zig lane requirement",
+  "status": "integration scaffold",
+  "preferred_zig": "0.14.1",
+  "baseline_command": [
+    "zig",
+    "build",
+    "--help"
+  ],
+  "build_zig": "0.14.1",
+  "build_command": [
+    "zig",
+    "build",
+    "--summary",
+    "all"
+  ],
+  "expected_build_classification": "dependency-format",
+  "azazel_command": [
+    "azazel",
+    "parity",
+    "--manifest",
+    ".azazel/parity.json"
+  ],
+  "expected_baseline_classification": "zig-toolchain",
+  "first_targets": [
+    "lib:capy",
+    "platform UI backend selection",
+    "examples"
+  ],
+  "system_deps": [],
+  "required_tools": [],
+  "pkg_config_libs": [],
+  "replacement_gaps": [
+    "transitive package format diagnostics",
+    "platform UI backend metadata"
+  ],
+  "integration_kind": "azazel",
+  "parity_status": "scaffold-only",
+  "executable_parity_status": "not-modeled",
+  "executable_parity_command": [],
+  "expected_executable_parity_classification": "not-modeled",
+  "executable_parity_targets": []
+}
